@@ -1,0 +1,39 @@
+/* Force Full Height for Layout */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Tailwind Core Directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------- Extra Global Styles -------------- */
+
+/* Font Smoothing for Better Typography */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+/* Body default styles */
+body {
+  @apply bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300 ease-in-out;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar (Optional but nice UX) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgba(100, 116, 139, 0.4); /* slate-500/40 */
+  border-radius: 6px;
+}
